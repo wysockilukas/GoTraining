@@ -10,7 +10,7 @@ func main() {
 	go func() {
 		c <- 42
 	}()
-	fmt.Println(<-c)
+	fmt.Println(<-c) //to chyba wstrzymuje wykonanie programu do puki nie otrzyma wartosci z kanalu
 
 	d := make(chan int, 1)
 	d <- 7
