@@ -18,6 +18,9 @@ func main() {
 	defer db.Close()
 
 	rows, err := db.Query("select sysdate from dual")
+
+	fmt.Printf("%T\n", rows)
+
 	if err != nil {
 		fmt.Println("Error running query")
 		fmt.Println(err)
